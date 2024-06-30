@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AO3 Random Fanfic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+		img {
+			max-width: 40%;
+			height: auto;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AO3 Random Fanfic</h1>
+        <input type="text" id="searchUrl" placeholder="Enter AO3 search or bookmarks URL" />
+        <br>
+        <button id="goButton">Go</button><br><br>
+		<div id="loading" style="display:none;">
+			<img src="{{ url_for('static', filename='img/loading.gif') }}" alt="Loading...">
+		</div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
